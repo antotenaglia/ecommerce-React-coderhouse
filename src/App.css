@@ -15,13 +15,44 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 11vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
+}
+
+.NavBar-nav {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.NavBar-marca {
+  padding: 0 10px;
+  line-height: 5vh;
+}
+
+.NavBar-ul {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.NavBar-li {
+  margin: 0 5px;
+  line-height: 12vh;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.NavBar-a {
+  color: azure;
+  text-decoration: none;
+  padding: 50px;
+
 }
 
 .App-link {
