@@ -1,3 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  color: black;
+}
+
 .App {
   text-align: center;
 }
@@ -13,50 +22,59 @@
   }
 }
 
+.ItemListContainer-saludo {
+  padding: 50px;
+}
+
 .App-header {
-  background-color: #282c34;
-  height: 11vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  
+  background-color: rgb(170, 202, 100);
+  width: 100%;
+  height: 80px;  
 }
 
 .NavBar-nav {
   display: flex;
   justify-content: space-between;
-
 }
 
 .NavBar-marca {
-  padding: 0 10px;
-  line-height: 5vh;
+  padding: 20px 50px 20px 50px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.NavBar-div {
+  display: flex;
+  margin-right: 20px;
 }
 
 .NavBar-ul {
-  display: flex;
-  margin-right: 40px;
-  list-style: none;
+  float: right;
+  margin-right: 20px; 
 }
 
 .NavBar-li {
-  margin: 0 5px;
-  line-height: 12vh;
+  display: inline-block;
+  margin: 0 15px;
+  line-height: 80px;
   font-size: 18px;
   text-transform: uppercase;
 }
 
 .NavBar-a {
-  color: azure;
-  text-decoration: none;
-  padding: 50px;
-
+  font-size: 20px;
+  color: rgb(78, 106, 16);
+  padding: 7px 13px;
 }
 
-.App-link {
-  color: #61dafb;
+.NavBar-carrito {
+  margin: 0 50px;
+  padding-top: 15px;
+}
+
+.CartWidget-imgcarrito {
+  height: 45px;
+  width: 45px;
 }
 
 @keyframes App-logo-spin {
