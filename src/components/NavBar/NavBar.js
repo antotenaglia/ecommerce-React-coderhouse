@@ -1,4 +1,4 @@
-import ImgCarrito from "./CartWidget"
+import ImgCarrito from "../CartWidget/CartWidget"
 
 const NavBar = () => {
     return (

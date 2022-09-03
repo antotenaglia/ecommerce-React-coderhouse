@@ -11,22 +11,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  margin: 30px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.ItemListContainer-saludo {
-  padding: 50px;
-}
-
 .App-header {
   background-color: rgb(170, 202, 100);
   width: 100%;
@@ -73,9 +57,13 @@
   padding-top: 15px;
 }
 
-.CartWidget-imgcarrito {
+.CartWidget-imgCarrito {
   height: 45px;
   width: 45px;
+}
+
+.Item-card {
+  margin: 25px;
 }
 
 .ItemCount-botonSuma, .ItemCount-botonResta {
@@ -104,14 +92,10 @@
   width: fit-content;
   border-radius: 20px;
   display: flex;
-  margin: auto;
+  margin: 50px auto 50px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ItemListContainer-saludo {
+  padding: 50px;
 }
+
