@@ -7,6 +7,7 @@ import Greeting from './components/Greeting/Greeting';
 function App() {
     const stock = 5; 
     const inicial = 1;
+    const onAddActive = (items) => {alert (`Agregaste ${items} producto/s al carrito`)};
     return (
       <div className="App">
           <header className="App-header">
@@ -14,7 +15,7 @@ function App() {
           </header>
           <Greeting greeting= "¡BIENVENIDO A STICKERZONE!"/>
           <ItemListContainer/>
-          <ItemCount stock= {stock} inicial= {inicial}/>
+          <ItemCount stock= {stock} inicial= {inicial} onAdd= {onAddActive}/>
       </div>
     );
 }
