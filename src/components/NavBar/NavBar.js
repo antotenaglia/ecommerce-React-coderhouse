@@ -1,15 +1,22 @@
-import ImgCarrito from "../CartWidget/CartWidget"
+import ImgCarrito from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
         <div> 
             <nav className="NavBar-nav">
                 <div className="NavBar-div">
-                <a className="NavBar-marca" href="/">STICKERZONE</a>
+                <NavLink className="NavBar-marca" to="/">STICKERZONE</NavLink>
                     <ul className="NavBar-ul">
-                        <li className="NavBar-li"><a className="NavBar-a" href="/">Home</a></li>
-                        <li className="NavBar-li"><a className="NavBar-a" href="/">Productos</a></li>
-                        <li className="NavBar-li"><a className="NavBar-a" href="/">Contacto</a></li>
+                        <li className="NavBar-li"><NavLink className= {({isActive}) => isActive ? 'NavBar-linkActive' : 'NavBar-linkNoActive'} to="/">Home</NavLink></li>
+                            <div className="NavBar-dropdown">
+                                <li className="NavBar-li"><NavLink className= {({isActive}) => isActive ? 'NavBar-linkActive' : 'NavBar-linkNoActive'} to="/category">Categorías</NavLink></li>
+                                <div className="NavBar-dropdownContent">
+                                    <NavLink className= "NavBar-dropdownItem" to="/category">Todas las categorías</NavLink>
+                                    <NavLink className= "NavBar-dropdownItem" to="/category/Coldplay">Coldplay</NavLink>
+                                    <NavLink className= "NavBar-dropdownItem" to="/category/Friends">Friends</NavLink>
+                                </div>
+                            </div>
                     </ul>  
                 </div>
                 <div className="NavBar-carrito"><ImgCarrito /></div>

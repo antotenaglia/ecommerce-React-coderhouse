@@ -14,7 +14,7 @@
 .App-header {
   background-color: rgb(170, 202, 100);
   width: 100%;
-  height: 80px;  
+  height: 75px;  
 }
 
 .NavBar-nav {
@@ -41,16 +41,53 @@
 .NavBar-li {
   display: inline-block;
   margin: 0 15px;
-  line-height: 80px;
+  line-height: 60px;
   font-size: 18px;
   text-transform: uppercase;
 }
 
-.NavBar-a {
+.NavBar-linkNoActive, .NavBar-dropdownItem {
   font-size: 20px;
   color: rgb(78, 106, 16);
   padding: 7px 13px;
   font-weight: 500;
+  display: block;
+}
+
+.NavBar-linkActive {
+  font-size: 20px;
+  color: white;
+  padding: 7px 13px;
+  font-weight: 500;
+}
+
+.NavBar-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.NavBar-dropdownContent {
+  display: none;
+  position: absolute;
+  line-height: 30px;
+  width: 300px;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  background-color: rgb(170, 202, 100);
+  padding: 10px;
+}
+
+.NavBar-dropdownItem {
+  width: fit-content;
+}
+
+.NavBar-dropdownItem:hover {
+  background-color:  rgb(170, 202, 100);
+  color: white;
+  width: 100%;
+}
+
+.NavBar-dropdown:hover .NavBar-dropdownContent {
+  display: block;
 }
 
 .NavBar-carrito {
@@ -64,19 +101,29 @@
 }
 
 .Item-card {
-  margin: 25px;
+  margin: 50px;
+}
+
+.ItemList-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .ItemDetail-card {
   display: flex; 
   justify-content: center;
+  margin: 100px;
+}
+
+.ItemDetail-base{
+  padding: 50px;
+  border: 1px solid rgb(78, 106, 16);
 }
 
 .ItemDetail-extrainformation {
   font-size: 20px;
-  margin: 15px;
-  padding-top: 55px;
-  
+  padding: 100px 50px 50px 50px;
 }
 
 .ItemDetail-info {
@@ -86,6 +133,7 @@
 .ItemDetail-promocion {
   color:rgb(78, 106, 16);
   font-weight: bold;
+  margin: 20px;
 }
 
 .ItemDetail-detalle {
@@ -104,6 +152,10 @@
   width: 300px;
   height: 30px;
   border-color: grey;
+}
+
+.ItemDetailContainer-msgWait, .ItemListContainer-msgWait{
+  line-height: 300px;
 }
 
 .ItemCount-botonSuma, .ItemCount-botonResta {
@@ -135,7 +187,7 @@
   margin: 10px auto 20px auto;
 }
 
-.ItemCount-botonAgregarProducto {
+.ItemCount-botonAgregarProducto, .Item-buttonVerMas {
   border: 2px solid rgb(142, 205, 15); 
   padding: 10px 15px;
   margin-bottom: 15px;
@@ -145,9 +197,18 @@
   border-radius: 20px;
 }
 
-.ItemCount-botonAgregarProducto:hover {
+.ItemCount-botonAgregarProducto:hover, .Item-buttonVerMas:hover {
   background-color: rgb(170, 202, 100);
   color: black;
+}
+
+.Item-marca {
+  margin: 5px 0px 15px 0px;
+  color: rgb(91, 137, 22);
+}
+
+.Item-buttonVerMas {
+  margin: 25px;
 }
 
 .ItemListContainer-saludo {
