@@ -20,7 +20,7 @@ const ItemListContainer = () => {
     const getProducts = new Promise ((resolve, reject) => { //muestra Productos luego de 2seg
         setTimeout(() => {
             if (categoryId) {
-                resolve(Products.filter(product => product.marca === categoryId))
+                resolve(Products.filter(product => product.categoryId === categoryId))
             }
             else {
                 resolve(Products);

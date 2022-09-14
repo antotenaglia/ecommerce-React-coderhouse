@@ -13,7 +13,7 @@ const ItemDetail = ({item}) => {
                     onAdd= {onAddActive}
                 />
             </div>
-            <div className="ItemDetail-extrainformation">
+            <div className="ItemDetail-extraInformation">
                 <h3 className="ItemDetail-info">{item.marca}</h3>
                 <h2 className="ItemDetail-info">Sticker {item.tipo}</h2>
                 <h4 className="ItemDetail-info">Precio: ${item.precio}</h4>

@@ -13,8 +13,6 @@ function App() {
               </header>
               <Routes>
                   <Route path='/' element= {<ItemListContainer/>}/>
-                  <Route path='/contact' element= {<div>Contacto</div>}/>
-                  <Route path='/category' element= {<ItemListContainer/>}/>
                   <Route path='/category/:categoryId' element= {<ItemListContainer/>}/>
                   <Route path='item/:id' element= {<ItemDetailContainer/>}/>
               </Routes>

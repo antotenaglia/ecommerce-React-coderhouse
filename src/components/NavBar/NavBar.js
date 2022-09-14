@@ -12,9 +12,9 @@ const NavBar = () => {
                             <div className="NavBar-dropdown">
                                 <li className="NavBar-li"><NavLink className= {({isActive}) => isActive ? 'NavBar-linkActive' : 'NavBar-linkNoActive'} to="/category">Categorías</NavLink></li>
                                 <div className="NavBar-dropdownContent">
-                                    <NavLink className= "NavBar-dropdownItem" to="/category">Todas las categorías</NavLink>
-                                    <NavLink className= "NavBar-dropdownItem" to="/category/Coldplay">Coldplay</NavLink>
-                                    <NavLink className= "NavBar-dropdownItem" to="/category/Friends">Friends</NavLink>
+                                    <NavLink className= "NavBar-dropdownItem" to="/">Todas las categorías</NavLink>
+                                    <NavLink className= "NavBar-dropdownItem" to="/category/bandas-musicales">Bandas musicales</NavLink>
+                                    <NavLink className= "NavBar-dropdownItem" to="/category/series">Series</NavLink>
                                 </div>
                             </div>
                     </ul>  
