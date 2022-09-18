@@ -117,13 +117,13 @@
 }
 
 .ItemDetail-base{
-  padding: 50px;
+  padding: 25px 75px;
   border: 1px solid rgb(78, 106, 16);
 }
 
 .ItemDetail-extraInformation {
   font-size: 20px;
-  padding: 100px 50px 50px 50px;
+  padding: 75px 0px 50px 75px;
 }
 
 .ItemDetail-info {
@@ -194,12 +194,28 @@
   letter-spacing: 1px;
   font-size: 15px;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
-.ItemCount-botonAgregarProducto:hover, .Item-buttonVerMas:hover {
+.Item-buttonVerMas:hover {
   background-color: rgb(170, 202, 100);
   color: black;
+}
+
+.ItemCount-botonFinalizarCompra {
+  border: 2px solid rgb(142, 205, 15); 
+  background-color:  rgb(170, 202, 100);  
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 177.05px;
+}
+
+.ItemCount-botonFinalizarCompra:hover, .ItemCount-botonAgregarProducto:hover {
+  background-color:  rgb(204, 225, 140); 
 }
 
 .Item-marca {
