@@ -34,6 +34,7 @@ const ItemListContainer = () => {
     return (
         <>
             <Greeting greeting= "¡BIENVENIDO A STICKERZONE!"/>
+            <h2>El lugar donde encontrarás los mejores stickers</h2>
             <ItemList lista={productList}/>
         </>
     );     

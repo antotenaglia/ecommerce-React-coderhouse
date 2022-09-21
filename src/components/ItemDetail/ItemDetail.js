@@ -1,24 +1,36 @@
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+
 
 const ItemDetail = ({product}) => {
-    const [items, setItems] = useState (1)
-    const onAddActive = () => {alert (`Agregaste ${items} producto/s al carrito`)};
+    const [items, setItems] = useState(1);
+
+    const [productAdded, setProductAdded] = useState(false);
+
+    const {addToCart} = useContext(CartContext);
+    
+    function onAdd (product) {
+        setProductAdded(true);
+        setItems(items);
+        addToCart(product, items);
+    };
+
     return (
         <div className="ItemDetail-card">
             <div className="ItemDetail-base">
                 <img src={product.imagen} alt={product.tipo} width= '200px' height='250px'/>
-                <ItemCount 
-                    stock= {product.stock} 
-                    items= {items}
-                    setItems= {setItems}
-                />
-                <div>
-                    <button onClick={onAddActive} className="ItemCount-botonAgregarProducto">Agregar al carrito</button>
-                </div>
-                <div>
-                    <Link to='/cart'><button className="ItemCount-botonFinalizarCompra">Finalizar compra</button></Link>
+                <div> 
+                    {productAdded ? (<Link to='/cart'><button className="ItemCount-botonFinalizarCompra">Finalizar compra</button></Link>)
+                    : (
+                        <>
+                            <ItemCount stock= {product.stock} items= {items} setItems= {setItems}/>
+                            <div>
+                                <button onClick={() => onAdd(product)} className="ItemCount-botonAgregarProducto">Agregar al carrito</button>
+                            </div>
+                        </>
+                    )}
                 </div>
             </div>
             <div className="ItemDetail-extraInformation">
