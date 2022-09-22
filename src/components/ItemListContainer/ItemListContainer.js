@@ -33,8 +33,8 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <Greeting greeting= "¡BIENVENIDO A STICKERZONE!"/>
-            <h2>El lugar donde encontrarás los mejores stickers</h2>
+            <Greeting greeting= "STICKERZONE"/>
+            <h2>+10.000 stickers en un sólo lugar!</h2>
             <ItemList lista={productList}/>
         </>
     );     

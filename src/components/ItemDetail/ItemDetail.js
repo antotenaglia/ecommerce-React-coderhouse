@@ -22,7 +22,12 @@ const ItemDetail = ({product}) => {
             <div className="ItemDetail-base">
                 <img src={product.imagen} alt={product.tipo} width= '200px' height='250px'/>
                 <div> 
-                    {productAdded ? (<Link to='/cart'><button className="ItemCount-botonFinalizarCompra">Finalizar compra</button></Link>)
+                    {productAdded ? (
+                        <>
+                            <div><Link to='/'><button className="ItemCount-botonSeguirComprando">Seguir comprando</button></Link></div>
+                            <div><Link to='/cart'><button className="ItemCount-botonFinalizarCompra">Finalizar compra</button></Link></div>
+                        </>
+                    )
                     : (
                         <>
                             <ItemCount stock= {product.stock} items= {items} setItems= {setItems}/>

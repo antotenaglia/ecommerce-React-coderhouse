@@ -94,13 +94,32 @@
   padding-top: 15px;
 }
 
+.CartWidget-contenedor{
+  position: relative;
+}
+
+.CartWidget-cantidadCarrito {
+  position: absolute;
+  top: 0;
+  left: 75%;
+  background: rgb(207, 66, 68);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+}
+
 .CartWidget-imgCarrito {
   height: 45px;
   width: 45px;
 }
 
 .Item-card {
-  margin: 50px;
+  margin: 45px 60px 40px 60px;
 }
 
 .ItemList-card {
@@ -116,7 +135,7 @@
 }
 
 .ItemDetail-base{
-  padding: 25px 75px;
+  padding: 55px 75px;
   border: 1px solid rgb(78, 106, 16);
 }
 
@@ -186,7 +205,7 @@
   margin: 10px auto 20px auto;
 }
 
-.ItemCount-botonAgregarProducto, .Item-buttonVerMas, .Cart-botonLimpiarCarrito {
+.ItemCount-botonAgregarProducto, .Item-buttonVerMas, .Cart-botonLimpiarCarrito, .ItemCount-botonSeguirComprando, .Cart-botonVolverInicio {
   border: 2px solid rgb(142, 205, 15); 
   padding: 10px 15px;
   margin-bottom: 15px;
@@ -220,19 +239,25 @@
   font-size: 15px;
   font-weight: bold;
   border-radius: 10px;
-  width: 177.05px;
+  width: 190px;
 }
 
-.ItemCount-botonFinalizarCompra {
-  margin-top: 45px;
+.ItemCount-botonFinalizarCompra, .ItemCount-botonSeguirComprando  {
+  margin-top: 10px;
+  width: 190px;
 }
 
 .Cart-botonLimpiarCarrito, .Cart-botonFinalizarCompra {
   margin: 50px; 
-  width: 177.05px;
+  width: 190px;
 }
 
-.ItemCount-botonFinalizarCompra:hover, .ItemCount-botonAgregarProducto:hover, .Cart-butonBorrarProducto:hover, .Cart-botonLimpiarCarrito:hover, .Cart-botonFinalizarCompra:hover {
+.Cart-botonVolverInicio {
+  margin-top: 60px;
+  width: 190px;
+}
+
+.ItemCount-botonFinalizarCompra:hover, .ItemCount-botonAgregarProducto:hover, .ItemCount-botonSeguirComprando:hover, .Cart-botonVolverInicio:hover, .Cart-butonBorrarProducto:hover, .Cart-botonLimpiarCarrito:hover, .Cart-botonFinalizarCompra:hover {
   background-color: rgb(204, 225, 140); 
 }
 
@@ -246,7 +271,7 @@
 }
 
 .ItemListContainer-saludo, .Cart-titulo {
-  padding: 50px 50px 15px 50px;
+  padding: 50px 50px 30px 50px;
 }
 
 .Cart-table {
@@ -261,4 +286,14 @@
 .Cart-column {
   width: 200px;
   margin-top: 15px;
+}
+
+.Cart-total {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.Cart-titulo {
+  margin-top: 25px;
+  font-size: 25px;
 }
