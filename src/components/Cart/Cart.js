@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
  
 const Cart = () => {
+
+    const rutaInicial = '../images/' ;
  
     const {cart, clear, removeItem} = useContext(CartContext);
 
@@ -32,7 +34,7 @@ const Cart = () => {
                                     <td>${product.precio}</td>
                                     <td>{product.quantity}</td>
                                     <td>${product.precio*product.quantity}</td>
-                                    <td><img src={product.imagen} alt={product.tipo} width= '75px' height='100px'/></td>
+                                    <td><img src={rutaInicial + product.imagen} alt={product.tipo} width= '75px' height='100px'/></td>
                                     <td><button className="Cart-butonBorrarProducto" onClick={() => removeItem (product.id)}> Borrar producto </button></td>
                                 </tr>
                             </tbody>

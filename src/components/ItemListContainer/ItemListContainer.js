@@ -1,31 +1,44 @@
-import Products from "../mockData";
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import Greeting from "../Greeting/Greeting";
 import { useParams } from "react-router-dom";
+import { getFirestore, getDocs, collection, query } from 'firebase/firestore';
+
 
 const ItemListContainer = () => {
+
     const [productList, setProductList] = useState([]); //asegura guardar el estado actual de productList
     const { categoryId } = useParams();
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect (() => { //se ejecuta una vez que se montó la promesa getProducts
-        setIsLoading(true);
-        getProducts.then((response) => { //una vez que se resuelve la promesa, ejecuta esta acción
-            setProductList(response);
-        })
-        .finally(() => setIsLoading(false)); 
+    useEffect (() => { //se ejecuta una vez que se montó la promesa 
+        getProducts();
+        setIsLoading(false);
     }, [categoryId]); 
 
-    const getProducts = new Promise ((resolve, reject) => { //muestra Productos luego de 2seg
-        setTimeout(() => {
+    const getProducts = () => {
+        const db = getFirestore(); //obtiene info de la base de datos
+        const querySnapshot = collection(db, 'items');
+
+        setTimeout(() => { //muestra Productos luego de 2seg
             if (categoryId) {
-                resolve(Products.filter(product => product.categoryId === categoryId))
+                const queryFilter = query(querySnapshot, where('categoryId','==', categoryId));  
+                getDocs(queryFilter).then ((response) => {
+                    const data = response.docs.map((doc) => {
+                        return {id: doc.id, ...doc.data()};
+                    })
+                    setProductList(data);
+                });
             }
             else {
-                resolve(Products);
-            }}, 2000);
-        });
+                getDocs(querySnapshot).then ((response) => {
+                    const data = response.docs.map((doc) => {
+                        return {id: doc.id, ...doc.data()};
+                    })
+                    setProductList(data);
+                });  
+            }}, 2000); 
+    }
 
     if (isLoading) {
         return <h2 className="ItemListContainer-msgWait">Cargando productos...</h2>

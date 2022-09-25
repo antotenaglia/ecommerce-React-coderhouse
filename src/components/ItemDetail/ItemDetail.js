@@ -5,11 +5,14 @@ import { CartContext } from "../../context/CartContext";
 
 
 const ItemDetail = ({product}) => {
+
     const [items, setItems] = useState(1);
 
     const [productAdded, setProductAdded] = useState(false);
 
     const {addToCart} = useContext(CartContext);
+
+    const rutaInicial = '../images/';
     
     function onAdd (product) {
         setProductAdded(true);
@@ -20,7 +23,7 @@ const ItemDetail = ({product}) => {
     return (
         <div className="ItemDetail-card">
             <div className="ItemDetail-base">
-                <img src={product.imagen} alt={product.tipo} width= '200px' height='250px'/>
+                <img src={rutaInicial + product.imagen} alt={product.tipo} width= '200px' height='250px'/>
                 <div> 
                     {productAdded ? (
                         <>
