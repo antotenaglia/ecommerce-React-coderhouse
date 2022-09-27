@@ -1,15 +1,19 @@
-
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
- 
+import Swal from "sweetalert2";
+
 const Cart = () => {
 
-    const rutaInicial = '../images/' ;
+    const rutaInicial = '../images/';
  
     const {cart, clear, removeItem} = useContext(CartContext);
 
     let precioTotal = cart.reduce((precioTotalCart, product) => precioTotalCart + (product.precio*product.quantity), 0);
+
+    function end () {
+        Swal.fire('Iniciar Sesión', 'Inicie sesión para continuar con la Compra','info')
+    };
  
     if (cart.length > 0) {
         return (
@@ -46,18 +50,18 @@ const Cart = () => {
                 </div>
                 <div>
                     <button onClick={clear} className="Cart-botonLimpiarCarrito">Limpiar Carrito</button>
-                    <button className="Cart-botonFinalizarCompra">Finalizar Compra</button>
+                    <button onClick={() => end ()} className="Cart-botonFinalizarCompra">Finalizar Compra</button>
                 </div>
             </div>
-        )
+        );
     } else {
         return (
             <>
                 <h1 className="Cart-titulo">NO HAY PRODUCTOS EN EL CARRITO DE COMPRAS</h1>
                 <div><Link to='/'><button className="Cart-botonVolverInicio">Volver al Inicio</button></Link></div>
             </>
-        )
-    }    
-}
+        );
+    };  
+};
  
-export default Cart
+export default Cart;

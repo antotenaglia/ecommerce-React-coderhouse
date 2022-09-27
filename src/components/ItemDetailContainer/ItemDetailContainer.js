@@ -12,7 +12,6 @@ const ItemDetailContainer = () => {
 
     useEffect (() => { //se ejecuta una vez que se montó la promesa 
         getItem();
-        setIsLoading(false); 
     }, [id]); 
 
     const getItem = () => { 
@@ -21,10 +20,12 @@ const ItemDetailContainer = () => {
         getDoc(queryDoc).then ((response) => {
             setProduct({id: response.id, ...response.data()});
         });
-    }    
+    }; 
     
     setTimeout(() => { //muestra Producto luego de 2seg
+        setIsLoading(true);
         getItem();
+        setIsLoading(false); 
     }, 2000);
     
     if (isLoading) {

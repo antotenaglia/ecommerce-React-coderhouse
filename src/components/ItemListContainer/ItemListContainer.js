@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import Greeting from "../Greeting/Greeting";
 import { useParams } from "react-router-dom";
-import { getFirestore, getDocs, collection, query } from 'firebase/firestore';
+import { getFirestore, getDocs, collection, query, where } from 'firebase/firestore';
 
 
 const ItemListContainer = () => {
@@ -13,7 +13,6 @@ const ItemListContainer = () => {
 
     useEffect (() => { //se ejecuta una vez que se montó la promesa 
         getProducts();
-        setIsLoading(false);
     }, [categoryId]); 
 
     const getProducts = () => {
@@ -21,6 +20,7 @@ const ItemListContainer = () => {
         const querySnapshot = collection(db, 'items');
 
         setTimeout(() => { //muestra Productos luego de 2seg
+            setIsLoading (true);
             if (categoryId) {
                 const queryFilter = query(querySnapshot, where('categoryId','==', categoryId));  
                 getDocs(queryFilter).then ((response) => {
@@ -37,7 +37,9 @@ const ItemListContainer = () => {
                     })
                     setProductList(data);
                 });  
-            }}, 2000); 
+            }
+            setIsLoading(false);
+        }, 2000); 
     }
 
     if (isLoading) {

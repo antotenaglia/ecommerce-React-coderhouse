@@ -3,15 +3,11 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
-
 const ItemDetail = ({product}) => {
 
     const [items, setItems] = useState(1);
-
     const [productAdded, setProductAdded] = useState(false);
-
     const {addToCart} = useContext(CartContext);
-
     const rutaInicial = '../images/';
     
     function onAdd (product) {
@@ -59,4 +55,4 @@ const ItemDetail = ({product}) => {
     )
 }
 
-export default ItemDetail
+export default ItemDetail;

@@ -23,10 +23,18 @@
 }
 
 .NavBar-marca {
-  padding: 20px 50px 20px 50px;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 1px;
+  padding: 0px;
 }
+
+@media only screen and (min-width: 715px) {
+  .NavBar-marca {
+    padding: 20px 50px 20px 50px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
 
 .NavBar-div {
   display: flex;
@@ -60,6 +68,13 @@
   font-weight: 500;
 }
 
+@media only screen and (min-width: 462px) {
+  .NavBar-linkActive, .NavBar-linkNoActive {
+    font-size: 20px;
+  }
+}
+
+
 .NavBar-dropdown {
   display: inline-block;
   position: relative;
@@ -90,8 +105,14 @@
 }
 
 .NavBar-carrito {
-  margin: 0 50px;
+  margin: 0 10px;
   padding-top: 15px;
+}
+
+@media only screen and (min-width: 462px) {
+  .NavBar-carrito {
+    margin: 0 50px;
+  }
 }
 
 .CartWidget-contenedor{
@@ -119,29 +140,57 @@
 }
 
 .Item-card {
-  margin: 45px 60px 40px 60px;
+  margin: 45px 10px 10px 10px;
+  width: 280px;
 }
 
 .ItemList-card {
-  display: flex;
-  flex-direction: row;
+  display: grid;  
+  grid-template-columns: repeat(1,300px);
   justify-content: center;
 }
+
+@media only screen and (min-width: 650px) {
+  .ItemList-card {
+    grid-template-columns: repeat(2,300px);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .ItemList-card {
+    grid-template-columns: repeat(3,300px);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ItemList-card {
+    grid-template-columns: repeat(4,300px);
+  }
+}
+
 
 .ItemDetail-card {
-  display: flex; 
-  justify-content: center;
   margin: 55px;
+  display: grid;  
+  grid-template-columns: repeat(1,350px);
+  justify-content: center;
 }
 
-.ItemDetail-base{
+@media only screen and (min-width: 850px) {
+  .ItemDetail-card {
+    grid-template-columns: repeat(2,350px);
+    grid-column-gap: 50px;
+  }
+}
+
+.ItemDetail-base {
   padding: 55px 75px;
   border: 1px solid rgb(78, 106, 16);
 }
 
 .ItemDetail-extraInformation {
   font-size: 20px;
-  padding: 75px 0px 50px 75px;
+  padding: 75px 35px 50px 35px;
 }
 
 .ItemDetail-info {
@@ -164,10 +213,8 @@
   background: rgb(91, 137, 22);
   text-align: center;
   font-size: 20px;
-  padding: 0px 10px;
-  margin: 0px 20px;
   border-radius: 7px;
-  width: 300px;
+  width: 270px;
   height: 30px;
   border-color: grey;
 }
