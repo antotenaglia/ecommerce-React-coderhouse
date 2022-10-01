@@ -1,4 +1,4 @@
-const rutaInicial = '../images/' ;
+const rutaInicial = '../images/';
 
 const Item = ({tipo, marca, precio, imagen}) => {
     return (

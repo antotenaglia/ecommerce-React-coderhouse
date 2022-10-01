@@ -13,4 +13,4 @@ const ItemCount = ({stock, items, setItems}) => {
     );
 }
 
-export default ItemCount
+export default ItemCount;

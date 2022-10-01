@@ -17,27 +17,17 @@ const ItemListContainer = () => {
 
     const getProducts = () => {
         const db = getFirestore(); //obtiene info de la base de datos
-        const querySnapshot = collection(db, 'items');
+        const queryBase = collection(db, 'items');
+        const querySnapshot = categoryId ? query(queryBase, where('categoryId','==', categoryId)) : queryBase
 
         setTimeout(() => { //muestra Productos luego de 2seg
-            setIsLoading (true);
-            if (categoryId) {
-                const queryFilter = query(querySnapshot, where('categoryId','==', categoryId));  
-                getDocs(queryFilter).then ((response) => {
-                    const data = response.docs.map((doc) => {
-                        return {id: doc.id, ...doc.data()};
-                    })
-                    setProductList(data);
-                });
-            }
-            else {
-                getDocs(querySnapshot).then ((response) => {
-                    const data = response.docs.map((doc) => {
-                        return {id: doc.id, ...doc.data()};
-                    })
-                    setProductList(data);
-                });  
-            }
+            setIsLoading (true);      
+            getDocs(querySnapshot).then ((response) => {
+                const data = response.docs.map((doc) => {
+                    return {id: doc.id, ...doc.data()};
+                })
+                setProductList(data);
+            });
             setIsLoading(false);
         }, 2000); 
     }

@@ -6,9 +6,10 @@ const NavBar = () => {
         <div> 
             <nav className="NavBar-nav">
                 <div className="NavBar-div">
-                <NavLink className="NavBar-marca" to="/">STICKERZONE</NavLink>
+                    <NavLink className="NavBar-marca" to="/">STICKERZONE</NavLink>
+                </div>    
+                <div>
                     <ul className="NavBar-ul">
-                        <li className="NavBar-li"><NavLink className= {({isActive}) => isActive ? 'NavBar-linkActive' : 'NavBar-linkNoActive'} to="/">Home</NavLink></li>
                             <div className="NavBar-dropdown">
                                 <li className="NavBar-li"><NavLink className= {({isActive}) => isActive ? 'NavBar-linkActive' : 'NavBar-linkNoActive'} to="/allCategories">Categorías</NavLink></li>
                                 <div className="NavBar-dropdownContent">
@@ -19,7 +20,9 @@ const NavBar = () => {
                             </div>
                     </ul>  
                 </div>
-                <div className="NavBar-carrito"><ImgCarrito /></div>
+                <div className="NavBar-carrito">
+                    <ImgCarrito />
+                </div>
             </nav>
         </div>
     )     

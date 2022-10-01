@@ -40,16 +40,10 @@ export const CartProvider = ({children}) => {
                     'El producto ha sido eliminado',
                     'success'
                 )
-                let newCart = [];
-                cart.forEach((product) => {
-                    if (product.id !== productId) {
-                        newCart.push(product);
-                    };
-                });
-                setCart(newCart);
-            }
-        })
-    }
+                setCart(cart.filter((product) => product.id !== productId));
+            };
+        });
+    };
 
     const clear = () => {
         Swal.fire({ 
@@ -62,8 +56,8 @@ export const CartProvider = ({children}) => {
         }).then((result) => {  
             if (result.isConfirmed) {
                 setCart([]);
-            }
-        })
+            };
+        });
     };
 
     return (

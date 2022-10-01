@@ -19,26 +19,17 @@
 
 .NavBar-nav {
   display: flex;
-  justify-content: space-between;
 }
 
 .NavBar-marca {
-  font-size: 1px;
-  padding: 0px;
+  padding: 25px 10px 20px 10px;
+  font-size: 20px;
+  font-weight: 600;
 }
-
-@media only screen and (min-width: 715px) {
-  .NavBar-marca {
-    padding: 20px 50px 20px 50px;
-    font-size: 25px;
-    font-weight: 600;
-  }
-}
-
 
 .NavBar-div {
   display: flex;
-  margin-right: 20px;
+  justify-content: space-between;
 }
 
 .NavBar-ul {
@@ -72,8 +63,13 @@
   .NavBar-linkActive, .NavBar-linkNoActive {
     font-size: 20px;
   }
+  .NavBar-nav {
+    justify-content: space-between;
+  }
+  .NavBar-carrito {
+    margin: 0 20px 0 110px;
+  }
 }
-
 
 .NavBar-dropdown {
   display: inline-block;
@@ -105,15 +101,10 @@
 }
 
 .NavBar-carrito {
-  margin: 0 10px;
+  margin: 0 20px 0 60px;
   padding-top: 15px;
 }
 
-@media only screen and (min-width: 462px) {
-  .NavBar-carrito {
-    margin: 0 50px;
-  }
-}
 
 .CartWidget-contenedor{
   position: relative;
@@ -156,7 +147,7 @@
   }
 }
 
-@media only screen and (min-width: 900px) {
+/* @media only screen and (min-width: 900px) {
   .ItemList-card {
     grid-template-columns: repeat(3,300px);
   }
@@ -166,8 +157,7 @@
   .ItemList-card {
     grid-template-columns: repeat(4,300px);
   }
-}
-
+} */
 
 .ItemDetail-card {
   margin: 55px;
@@ -304,7 +294,7 @@
   width: 190px;
 }
 
-.ItemCount-botonFinalizarCompra:hover, .ItemCount-botonAgregarProducto:hover, .ItemCount-botonSeguirComprando:hover, .Cart-botonVolverInicio:hover, .Cart-butonBorrarProducto:hover, .Cart-botonLimpiarCarrito:hover, .Cart-botonFinalizarCompra:hover {
+.ItemCount-botonFinalizarCompra:hover, .ItemCount-botonAgregarProducto:hover, .ItemCount-botonSeguirComprando:hover, .Cart-botonVolverInicio:hover, .Cart-butonBorrarProducto:hover, .Cart-botonLimpiarCarrito:hover, .Cart-botonFinalizarCompra:hover, .Login-buttonEnviar:hover {
   background-color: rgb(204, 225, 140); 
 }
 
@@ -343,4 +333,41 @@
 .Cart-titulo {
   margin-top: 25px;
   font-size: 25px;
+}
+
+.Login-section {
+  border: solid 1px rgb(204, 199, 199);
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 0px #888888;
+  height: fit-content;
+  width: 300px;
+  padding: 15px 30px;
+  margin: 25px auto;
+}
+
+.Login-input {
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 220px;
+  height: 30px;
+  border: gray;
+  border-bottom: 1px solid gray;
+}
+
+.Login-hola {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.Login-buttonEnviar {
+  border: 2px solid rgb(142, 205, 15); 
+  background-color:  rgb(170, 202, 100);  
+  padding: 5px 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100px;
 }
