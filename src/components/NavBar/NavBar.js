@@ -2,6 +2,7 @@ import ImgCarrito from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
+    
     return (
         <div> 
             <nav className="NavBar-nav">
@@ -25,7 +26,7 @@ const NavBar = () => {
                 </div>
             </nav>
         </div>
-    )     
-}
+    );     
+};
 
-export default NavBar
+export default NavBar;

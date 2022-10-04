@@ -52,7 +52,7 @@ const ItemDetail = ({product}) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ItemDetail;

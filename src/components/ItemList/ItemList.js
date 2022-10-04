@@ -1,8 +1,8 @@
-
 import Item from "../Item/Item";
 import { Link } from "react-router-dom";
 
 const ItemList = ({lista}) => {
+    
     return (
         <div className="ItemList-card">
             {lista.map((product) => (

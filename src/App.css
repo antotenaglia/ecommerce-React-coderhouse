@@ -147,18 +147,6 @@
   }
 }
 
-/* @media only screen and (min-width: 900px) {
-  .ItemList-card {
-    grid-template-columns: repeat(3,300px);
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .ItemList-card {
-    grid-template-columns: repeat(4,300px);
-  }
-} */
-
 .ItemDetail-card {
   margin: 55px;
   display: grid;  

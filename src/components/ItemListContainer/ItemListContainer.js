@@ -4,7 +4,6 @@ import Greeting from "../Greeting/Greeting";
 import { useParams } from "react-router-dom";
 import { getFirestore, getDocs, collection, query, where } from 'firebase/firestore';
 
-
 const ItemListContainer = () => {
 
     const [productList, setProductList] = useState([]); //asegura guardar el estado actual de productList
@@ -30,11 +29,11 @@ const ItemListContainer = () => {
             });
             setIsLoading(false);
         }, 2000); 
-    }
+    };
 
     if (isLoading) {
         return <h2 className="ItemListContainer-msgWait">Cargando productos...</h2>
-    }
+    };
 
     return (
         <>
@@ -45,4 +44,4 @@ const ItemListContainer = () => {
     );     
 };
 
-export default ItemListContainer
+export default ItemListContainer;

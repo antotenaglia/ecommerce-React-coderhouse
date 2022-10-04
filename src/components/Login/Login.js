@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = ({name, phone, email, handleInputChange}) => {
+
+    function alert () {
+        Swal.fire(
+            '¡Compra realizada!',
+            'Enseguida nos pondremos en contacto contigo. ¡Muchas gracias por su compra!',
+            'success'
+          )
+    };
 
     return (
         <Link to='/logIn'> 
@@ -16,11 +25,11 @@ const Login = ({name, phone, email, handleInputChange}) => {
                     <input type='text' name='phone' value= {phone} onChange={handleInputChange} className='Login-input' placeholder="Teléfono"/>
                 </div>
                 <div>
-                    <button type="button" className="Login-buttonEnviar">Enviar</button>
+                    <button type="button" className="Login-buttonEnviar" onClick={() => alert()}>Enviar</button>
                 </div>
             </div>
         </Link>
-  );
+    );
 };
 
 export default Login;

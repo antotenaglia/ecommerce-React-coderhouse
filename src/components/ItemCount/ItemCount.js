@@ -1,7 +1,8 @@
-
 const ItemCount = ({stock, items, setItems}) => {
+
     const suma = () => {if (items < stock) setItems (items + 1)}
     const resta = () => {if (items > 1) setItems (items - 1)}
+
     return (
         <>
             <div className="ItemCount-sumadorContenedor">
@@ -11,6 +12,6 @@ const ItemCount = ({stock, items, setItems}) => {
             </div>
         </>
     );
-}
+};
 
 export default ItemCount;

@@ -1,6 +1,7 @@
-const rutaInicial = '../images/';
-
 const Item = ({tipo, marca, precio, imagen}) => {
+    
+    const rutaInicial = '../images/';
+
     return (
         <div className="Item-card">    
             <img src={rutaInicial + imagen} alt={tipo} width= '150px' height='200px'/>
@@ -9,7 +10,7 @@ const Item = ({tipo, marca, precio, imagen}) => {
             <h3>Precio: ${precio}</h3>
             <button className="Item-buttonVerMas">Ver más</button>
         </div>
-    )
-}
+    );
+};
 
 export default Item;

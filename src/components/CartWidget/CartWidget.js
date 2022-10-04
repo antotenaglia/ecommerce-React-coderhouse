@@ -3,7 +3,6 @@ import { CartContext } from '../../context/CartContext';
 import { useContext } from "react";
 import { Link } from 'react-router-dom';
 
-
 const ImgCarrito = () => {
 
     const {cart} = useContext(CartContext);
@@ -19,8 +18,8 @@ const ImgCarrito = () => {
                 )}
             </div>
         </Link>
-    )     
-}
+    );     
+};
 
-export default ImgCarrito
+export default ImgCarrito;
 
