@@ -8,7 +8,7 @@ Finalmente, en el resumen del carrito de compras se pueden visualizar todos los 
 
 ## Demo 
 
-![] (https://github.com/antotenaglia/tiendastickers-tenaglia/blob/main/tiendaStickers.gif)
+![](https://github.com/antotenaglia/tiendastickers-tenaglia/blob/main/tiendaStickers.gif)
 
 ## Dependencias instaladas
 
