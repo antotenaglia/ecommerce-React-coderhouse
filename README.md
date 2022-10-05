@@ -1,4 +1,4 @@
-# tiendaSticker por Antonela Tenaglia
+# tiendaStickers por Antonela Tenaglia
 
 Este proyecto está realizado en React y es el proyecto final del curso de React dictado en [CoderHouse] (https://www.coderhouse.com)
 
@@ -8,7 +8,7 @@ Finalmente, en el resumen del carrito de compras se pueden visualizar todos los 
 
 ## Demo 
 
-
+![] (https://github.com/antotenaglia/tiendastickers-tenaglia/blob/main/tiendaStickers.gif)
 
 ## Dependencias instaladas
 
