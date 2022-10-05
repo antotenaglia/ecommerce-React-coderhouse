@@ -6,7 +6,7 @@ Es un Ecommerce de venta de stickers, los cuales se encuentran clasificados por 
 En la página principal se pueden visualizar todas las categorías con un detalle simple de cada sticker. Luego al hacer click sobre cada sticker se puede acceder a más detalles del mismo, permitiendo a su vez seleccionar la cantidad de stickers deseados para agregar al carrito de compras. 
 Finalmente, en el resumen del carrito de compras se pueden visualizar todos los productos agregados al mismo, con la opción de borrar cada producto no deseado o de borrar todos a la vez. Al seleccionar finalizar compra se accede a un formulario para completar la orden, la cual se guarda automaticamente en el firebase de Google.  
 
-## Demo
+## Demo 
 
 
 
