@@ -27,7 +27,6 @@ const Login = ({name, phone, email, emailchecked}) => {
     const [inputPhone, setInputPhone] = useState('');
     const [inputEmail, setInputEmail] = useState('');
     const [inputEmailChecked, setInputEmailChecked] = useState('');
-    let disabledCondition = true;
 
     const handleInputChange = (event, input) => {
         if(input === "name") {
