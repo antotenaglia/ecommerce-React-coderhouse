@@ -201,6 +201,10 @@
   line-height: 300px;
 }
 
+.ItemDetailContainer-msgError {
+  margin-top: 60px;
+}
+
 .ItemCount-botonSuma, .ItemCount-botonResta {
   color: white;
   background: black;

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 const ItemDetailContainer = () => {
 
@@ -31,11 +32,22 @@ const ItemDetailContainer = () => {
         return <h2 className="ItemDetailContainer-msgWait">Cargando detalle del producto...</h2>
     };
 
-    return (
-        <>
-            <ItemDetail product= {product}/>
-        </>
-    );    
+    if (product.marca) {
+        return (
+            <>
+                <ItemDetail product= {product}/>
+            </>
+        );    
+    } else {
+        return ( 
+            <>
+                <h2 className="ItemDetailContainer-msgError">El producto que está buscando no existe</h2>
+                <div><Link to='/'><button className="Cart-botonVolverInicio">Volver al Inicio</button></Link></div>
+            </>
+        );
+    };
+    
+
 };
 
 export default ItemDetailContainer;

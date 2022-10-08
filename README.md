@@ -17,7 +17,7 @@ Finalmente, en el resumen del carrito de compras se pueden visualizar todos los 
 - [sweet-alert2] (https://sweetalert2.github.io/)
 - [firebase] (https://firebase.google.com/)
 
-## Para mas informacion 
+## Para mas información 
 
 Pueden visitar mi portfolio https://github.com/antotenaglia
 
